@@ -3,8 +3,8 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.shared
-canonical: http://example.org/shared
+id: fhir.sharedchild
+canonical: http://example.org/sharedchild
 name: SharedIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
@@ -26,7 +26,6 @@ publisher:
 #
 dependencies:
   fhir.cqf.common: 4.0.1
-  fhir.sharedchild: dev
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
