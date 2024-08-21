@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Building SharedChild..." && \
-  (cd SharedChildIG && ./_genonce.sh) && \
-  echo "Building Shared..." && \
-  (cd SharedIG && ./_genonce.sh) && \
-  echo "Building Parent..." && \
-  (cd ParentIG && ./_genonce.sh)
-
+echo "Building All IGs in parallel..." && \
+  (cd SubDependencyIG && ./_genonce.sh) & \
+  (cd DependencyIG && ./_genonce.sh) & \
+  (cd ParentIG && ./_genonce.sh) && wait

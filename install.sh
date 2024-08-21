@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-echo "Installing Shared..." && \
-  (cd SharedIG && ./_updatePublisher.sh -y) && \
+echo "Installing SubDependency..." && \
+  (cd SubDependencyIG && ./_updatePublisher.sh -y) && \
+  echo "Installing Dependency..." && \
+  cp -r SubDependencyIG/input-cache DependencyIG/input-cache && \
+  cp -r SubDependencyIG/*.sh DependencyIG/ && \
   echo "Installing Parent..." && \
-  cp -r SharedIG/input-cache SharedChildIG/input-cache
-  cp -r SharedIG/input-cache ParentIG/input-cache
+  cp -r SubDependencyIG/input-cache ParentIG/input-cache && \
+  cp -r SubDependencyIG/*.sh ParentIG/
 

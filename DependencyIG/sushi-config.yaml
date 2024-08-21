@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.sharedchild
-canonical: http://example.org/sharedchild
-name: SharedIG
+id: fhir.dependency
+canonical: http://example.org/dependency
+name: DependencyIG
 # title: Example Title
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
@@ -25,7 +25,7 @@ publisher:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  fhir.cqf.common: 4.0.1
+  fhir.subdependency: dev
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode

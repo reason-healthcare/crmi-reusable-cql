@@ -1,5 +1,6 @@
 library fhir.parent.ParentLibrary
 
-include fhir.shared.SharedLibrary called Shared
+include fhir.dependency.DependencyLibrary called Dependency
 
-define "using shared": Shared."from shared"
+define "message chain": 
+  'From parent, ' + Dependency."from dependency"
