@@ -1,4 +1,4 @@
-library fhir.subdependency.SharedChildLibrary version '0.0.1'
+library fhir.subdependency.SubDependencyLibrary version '0.0.1'
 
 // include fhir.cqf.common.FHIRCommon version '4.0.1' called Common
 

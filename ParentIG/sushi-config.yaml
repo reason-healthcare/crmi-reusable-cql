@@ -26,7 +26,7 @@ publisher:
 #
 dependencies:
   fhir.dependency: dev
-  fhir.subdependency: dev
+#  fhir.subdependency: dev
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
