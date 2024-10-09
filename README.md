@@ -17,6 +17,7 @@ Build all IGs in parallel:
 ## Install the VSCode CQF Plugin
 
 https://github.com/cqframework/vscode-cql
+(using 0.7.3)
 
 ## Open VS Code in context of Parent
 
@@ -33,11 +34,12 @@ Initially opening `input/cql/ParentLibrary.cql` causes Java backtraces when inst
 ## Working
 
 ✔ Syntax highlighting, and type hinting works with transitive dependencies
+
 ✔ View ELM
 
 ## Not Working
 
 ✖️ Execute CQL, see [error](execute-error-first-time.txt) and [error 2](execute-error-subsequent.txt)
-  "org.opencds.cqf.cql.engine.exception.CqlException: library ParentLibrary loaded, but had errors: Could not resolve namespace name fhir.parent, Could not resolve namespace name fhir.dependency, Could not resolve identifier Dependency in the current library."
-
-
+```
+"org.opencds.cqf.cql.engine.exception.CqlException: library ParentLibrary loaded, but had errors: Could not resolve namespace name fhir.parent, Could not resolve namespace name fhir.dependency, Could not resolve identifier Dependency in the current library."
+```
