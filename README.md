@@ -1,5 +1,8 @@
 # Demonstration of reusing CQL with namespaces
 
+* Run the setup scripts identified below
+* Run `./cql-to-elm-cli/bin/cql-to-elm-cli --input ./DependencyIG/input/cql/DependencyLibrary.cql` to see the error
+
 ## Setup
 
 Install IGPublisher.jar:
@@ -14,30 +17,10 @@ Build all IGs in parallel:
 ./build.sh
 ```
 
-## Install the VSCode CQF Plugin
+## BUG
 
-https://github.com/cqframework/vscode-cql
-
-## Open VS Code in context of Parent
-
-```
-cd ParentIG
-code .
-```
-
-## Buggy
-
-Initially opening `input/cql/ParentLibrary.cql` causes Java backtraces when installing dependencies. See [error](plugin-error-initial-open-cql-file.txt). If you close the file, and reload VS Code. Or exit VS Code and reopen the same cql file, the error goes away.
-
-
-## Working
-
-✔ Syntax highlighting, and type hinting works with transitive dependencies
-✔ View ELM
-
-## Not Working
-
-✖️ Execute CQL, see [error](execute-error-first-time.txt) and [error 2](execute-error-subsequent.txt)
-  "org.opencds.cqf.cql.engine.exception.CqlException: library ParentLibrary loaded, but had errors: Could not resolve namespace name fhir.parent, Could not resolve namespace name fhir.dependency, Could not resolve identifier Dependency in the current library."
+Converting `input/cql/ParentLibrary.cql` to ELM causes a namespace resolution error when using the latest build of the `cql-to-elm-cli`.
+This occurs in the opensource VSCode extension as well, but I've narrowed it down to the actual translator. 
+<img width="1008" alt="image" src="https://github.com/user-attachments/assets/396ab28a-d37f-49f9-ba40-21434605dc7b">
 
 
