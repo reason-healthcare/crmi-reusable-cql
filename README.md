@@ -9,7 +9,7 @@ Install IGPublisher.jar:
 
 ## Build
 
-Build all IGs in parallel:
+Build all IGs:
 ```
 ./build.sh
 ```
