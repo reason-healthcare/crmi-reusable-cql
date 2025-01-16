@@ -33,6 +33,7 @@ Initially opening `input/cql/ParentLibrary.cql` causes Java backtraces when inst
 ## Working
 
 ✔ Syntax highlighting, and type hinting works with transitive dependencies
+
 ✔ View ELM
 
 ## Not Working
