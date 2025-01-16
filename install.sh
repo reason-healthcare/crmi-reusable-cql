@@ -3,9 +3,9 @@
 echo "Installing SubDependency..." && \
   (cd SubDependencyIG && ./_updatePublisher.sh -y) && \
   echo "Installing Dependency..." && \
-  cp -r SubDependencyIG/input-cache DependencyIG/input-cache && \
-  cp -r SubDependencyIG/*.sh DependencyIG/ && \
+  cp -rf SubDependencyIG/input-cache DependencyIG && \
+  cp -rf SubDependencyIG/*.sh DependencyIG/ && \
   echo "Installing Parent..." && \
-  cp -r SubDependencyIG/input-cache ParentIG/input-cache && \
-  cp -r SubDependencyIG/*.sh ParentIG/
+  cp -rf SubDependencyIG/input-cache ParentIG && \
+  cp -rf SubDependencyIG/*.sh ParentIG/
 
