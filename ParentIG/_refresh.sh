@@ -3,6 +3,7 @@
 tooling_jar=tooling-cli-3.7.0.jar
 input_cache_path=./input-cache
 ig_ini_path=$PWD/ig.ini
+script_dir="$(dirname "$0")"
 
 set -e
 echo Checking internet connection...
@@ -25,7 +26,7 @@ else
 	tooling=../$tooling_jar
 	echo $tooling
 	if test -f "$tooling"; then
-		java -jar $tooling -RefreshIG -ini="$ig_ini_path" -lp=/Users/bkaney/projects/crmi-reusable-cql/ParentIG/fsh-generated/resources -d -p -t $fsoption
+		java -jar $tooling -RefreshIG -ini="$ig_ini_path" -lp="$script_dir/fsh-generated/resources" -d -p -t $fsoption
 	else
 		echo IG Refresh NOT FOUND in input-cache or parent folder.  Please run _updateCQFTooling.  Aborting...
 	fi
